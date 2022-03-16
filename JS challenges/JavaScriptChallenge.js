@@ -65,14 +65,14 @@ function myFunction() {
   }
 
   // OOP object
-  class Dog { 
+  class Dog { // class of what we want our object to be like
     constructor(breed, color, height, weight ) {
         this.breed = breed;
         this.color = color;
         this.height = height;
         this.weight = weight;
       }
-      shake() {
+      shake() { // methods or behaviors the dog will have
         return "the dog shook your hand";
       }
       sit() {
@@ -82,21 +82,23 @@ function myFunction() {
         return "the dog laid down";
       }
   }
-  let myDog = new Dog("Goldendoodle", "Black", "30 inches", "35lbs")
+  let myDog = new Dog("Goldendoodle", "Black", "30 inches", "35lbs") // object of dog
   document.getElementById("dog").innerHTML = `The dog is a  ${myDog.color } ${myDog.breed}
   that is ${myDog.height} tall, and weighs ${myDog.weight}.`;
   document.getElementById("behavior").innerHTML = myDog.shake();
 
   // Shape classes
+
+  // this is our base class
   class Shape {
-    constructor(color) {
-      this.color = color;
+    constructor(color) { 
+      this.color = color;// property
     }
-    getArea(){
+    getArea(){ // method inside our class
 
     }
   }
-  class Rectangle extends Shape {
+  class Rectangle extends Shape { // new class inheriting from base class and adding own properties
     constructor(color, height, width) {
       super(color)
       this.height = height;
