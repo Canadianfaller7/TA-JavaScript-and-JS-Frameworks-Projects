@@ -86,3 +86,33 @@ function myFunction() {
   document.getElementById("dog").innerHTML = `The dog is a  ${myDog.color } ${myDog.breed}
   that is ${myDog.height} tall, and weighs ${myDog.weight}.`;
   document.getElementById("behavior").innerHTML = myDog.shake();
+
+  // Shape classes
+  class Shape {
+    constructor(color) {
+      this.color = color;
+    }
+    getArea(){
+
+    }
+  }
+  class Rectangle extends Shape {
+    constructor(color, height, width) {
+      super(color)
+      this.height = height;
+      this.width = width;
+     }
+  }
+  class Triangle extends Shape {
+    constructor(color, base, height) {
+      super(color)
+      this.base = base;
+      this.height = height;
+    }
+  }
+  class Circle extends Shape {
+    constructor(color, radius) {
+      super(color)
+      this.radius = radius;
+    }
+  }
