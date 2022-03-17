@@ -104,6 +104,9 @@ function myFunction() {
       this.height = height;
       this.width = width;
      }
+     getArea() {
+       return this.height * this.width;
+     }
   }
   class Triangle extends Shape {
     constructor(color, base, height) {
@@ -111,10 +114,16 @@ function myFunction() {
       this.base = base;
       this.height = height;
     }
+    getArea() {
+      return 0.5 * this.base * this.height;
+    }
   }
   class Circle extends Shape {
     constructor(color, radius) {
       super(color)
       this.radius = radius;
+    }
+    getArea() {
+      return Math. PI * this. radius * this. radius;
     }
   }
